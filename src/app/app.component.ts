@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'janus-streem';
+  
+
+  startCall() {
+    const videoMedia = navigator.mediaDevices.getUserMedia({
+      video: {
+        width: {ideal: 720},
+        height: {ideal: 480}
+      }, 
+      audio: true
+    });
+
+    console.log(videoMedia);
+  }
 }
