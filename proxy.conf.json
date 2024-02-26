@@ -1,0 +1,8 @@
+{
+  "/janode": 
+    {
+      "target": "https://localhost:4443/janode",
+      "secure": false,
+      "changeOrigin": true
+    }
+}

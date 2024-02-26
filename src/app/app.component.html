@@ -1,5 +1,7 @@
 <div class="video-wrapper">
-  <video #video autoplay playsinline></video>
+  <video #localVideo autoplay playsinline></video>
+  <video #remoteVideo autoplay playsinline></video>
 </div>
 
-<button (click)="startCall()">Connect</button>
+<button (click)="toggleConnection()">Toggle Connection</button>
+<button (click)="startEchoTest()">Start Echo Test</button>

@@ -62,13 +62,18 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "ssl": true,
+            "sslKey": "./example.key",
+            "sslCert": "./example.crt"
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "janus-streem:build:production"
+              "buildTarget": "janus-streem:build:production"
             },
             "development": {
-              "browserTarget": "janus-streem:build:development"
+              "buildTarget": "janus-streem:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "janus-streem:build"
+            "buildTarget": "janus-streem:build"
           }
         },
         "test": {
